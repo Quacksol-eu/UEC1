@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "uec1 workspaces CUSTOM NAME",
+			"path": "."
+		},
+		{
+			"path": "../uec1-lab2"
+		},
+		{
+			"path": "../uec1-przykladowy-inny-projekt"
+		}
+	],
+	"settings": {}
+}

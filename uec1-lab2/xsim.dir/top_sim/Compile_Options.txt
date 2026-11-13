@@ -1,1 +1,1 @@
---debug "typical" "hello_tb" --snapshot "top_sim" 
+--debug "typical" "alarm_testbench" --snapshot "top_sim" 
