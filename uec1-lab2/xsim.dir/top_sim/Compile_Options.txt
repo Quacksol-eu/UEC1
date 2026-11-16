@@ -1,1 +1,0 @@
---debug "typical" "alarm_testbench" --snapshot "top_sim" 
