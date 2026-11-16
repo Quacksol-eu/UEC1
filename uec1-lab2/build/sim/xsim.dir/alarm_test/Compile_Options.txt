@@ -1,1 +1,0 @@
-"work.alarm_test" -snapshot "alarm_test" -prj "/home/student/ksolecki/Desktop/code/uec1-lab2/sim/alarm/alarm.prj" -timescale "1ns/1ps" -debug "typical" 

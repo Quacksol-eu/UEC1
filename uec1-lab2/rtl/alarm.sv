@@ -7,6 +7,6 @@ module alarm(
     output logic alarm
 );
 
-    assign alarm = |{door1, door2, door3, door4, door5};
+    assign alarm = |{door1, door2, door3, (!door4), door5};
 
 endmodule
