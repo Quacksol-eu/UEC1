@@ -5,27 +5,38 @@ module alarm_testbench;
 
     alarm alarm_dut(doors[0], doors[1], doors[2], doors[3], doors[4], alarm);
 
-    initial begin
+    task check(input [4:0] d);
+	doors = d;
+	#10;
+	assert (alarm == (|d)) else
+		$error("alarm not working");
+    endtask
 
-        $monitor("door0 = %b, door0 = %b, door0 = %b, door0 = %b, door0 = %b, alarm = %b ", doors[0], doors[1], doors[2], doors[3], doors[4], alarm);
-        
-        doors = 5'b0;
+	initial begin
 
-        for (int i = 0; i < 6; i++) begin
-            doors[i] = 1'b1;
-            #10
-            assert (alarm == 1) else
-                $error("alarm sie nie wlaczyl");
-        end
+	$monitor("t=%0t doors =%b alarm=%b", $time, doors, alarm);
+	check(5'b00000);
+	check(5'b00000);
+	check(5'b10000);
+	check(5'b00000);
+	check(5'b01000);
+	check(5'b00000);
+	check(5'b00100);
+	check(5'b00000);
+	check(5'b00010);
+	check(5'b00000);
+	check(5'b00001);
+	check(5'b00000);	
+	
+	$display("koniec");
+	$finish;
+	
+	
+	end
 
-        #10
+      
 
-        doors = 5'b0;
 
-        #10
-
-        assert (alarm == 0) else
-                $error("alarm sie nie wlaczyl");
-    end
-    
 endmodule
+
+
