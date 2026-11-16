@@ -1,0 +1,7 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/student/ksolecki/Desktop/code/uec1-lab2/lab2/lab2.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,uvm,,,,,,
+/home/student/ksolecki/Desktop/code/uec1-lab2/rtl/alarm.sv,1794241610,systemVerilog,,/home/student/ksolecki/Desktop/code/uec1-lab2/sim/alarm_testbench.sv,,alarm,,uvm,,,,,,
+/home/student/ksolecki/Desktop/code/uec1-lab2/sim/alarm_testbench.sv,1794242563,systemVerilog,,,,alarm_tb,,uvm,,,,,,
