@@ -7,17 +7,23 @@ module counter_test;
 
 logic clk, rst_n;
 
-logic [3:0] value;
+localparam int MAX_COUNT = 5;
+logic [$clog2(MAX_COUNT)-1:0] value;
+logic overflow;
+
 logic enabled;
 
 
 /* Submodules placement */
 
-counter dut (
+counter #(
+    .MAX_COUNT(MAX_COUNT)
+    ) dut (
     .clk,
     .rst_n,
     .enabled,
-    .value
+    .value,
+    .overflow
 );
 
 
@@ -48,7 +54,7 @@ task test_enabled_counter();
 
     reset();
 
-    for (int i = 0; i < 10; ++i) begin
+    for (int i = 0; i < (MAX_COUNT + 5); ++i) begin
         assert (value == i) else begin
             $error("value: exp: %1d, rcv: %1d", i, value);
         end
